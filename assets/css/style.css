@@ -34,20 +34,18 @@ ul {
   list-style: none;
 }
 
-.hearder-content {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 10rem 3rem;
-}
-
-.main-content {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 10rem 9cqw;
-}
-
 .section {
-  min-height: 90vh;
+  min-height: auto;
+}
+
+.max-content-width {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.other-bg {
+  background: #000022;
+  color: #ffffff;
 }
 
 /* header */
@@ -67,8 +65,8 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem;
-  /* padding-top: 0;
-  padding-bottom: 0; */
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 .menu h1 a {
@@ -131,12 +129,12 @@ ul {
   padding: 0.2rem 0.8rem;
   font-size: 1.8rem;
   cursor: pointer;
-  transition: all 300ms ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu ul li button:hover {
   background: white;
-  color: white;
+  color: black;
 }
 
 .menu-blur {
@@ -160,7 +158,7 @@ ul {
   }
 }
 
-/* section 1 */
+/* section 1 - Home */
 .main-bg {
   background-image: url(../img/vanishing-stripes.svg);
   background-size: cover;
@@ -168,17 +166,12 @@ ul {
   color: #ffffff;
 }
 
-.other-bg {
-  background: #000022;
-  color: #ffffff;
-}
-
 .home-content {
   position: relative;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 1rem;
-  min-height: 90vh;
+  gap: 3rem;
+  padding: 9rem 9rem 7rem 9rem;
 }
 
 .home-text-content,
@@ -209,7 +202,7 @@ ul {
   border: 2px solid white;
 }
 
-/* Menu transition */
+/* Home transition */
 .left-element {
   animation-name: fadeInLeft;
   animation-duration: 0.6s;
@@ -240,4 +233,55 @@ ul {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* Section 2 - About */
+
+.about-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  min-height: auto;
+  padding: 5rem 9rem 5rem 9rem;
+}
+
+.about-text-content h2 {
+  font-size: 4rem;
+  font-weight: 800;
+
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.about-text-content p {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.carousel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  counter-reset: grid-counter;
+}
+
+.item {
+  max-width: 80px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.item h3 {
+  font-size: 1.8rem;
 }
