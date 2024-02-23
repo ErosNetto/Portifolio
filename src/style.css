@@ -266,19 +266,55 @@ ul {
   align-items: center;
 }
 
-.carousel-grid {
+.container-slider {
+  display: flex;
+  width: 100%;
+  min-height: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.container-images {
   position: relative;
-  min-width: 100%;
-  height: auto;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
 }
 
-.template-one,
-.template-two {
+#prev-button,
+#next-button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#prev-button img,
+#next-button img {
+  width: 100%;
+  height: 100%;
+}
+
+#prev-button {
+  transform: rotate(180deg);
+}
+
+.slider {
+  opacity: 0;
+  transition: opacity 0.2s;
+  position: absolute;
+  width: 100%;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   counter-reset: grid-counter;
+}
+
+.on {
+  opacity: 1;
 }
 
 .item {
