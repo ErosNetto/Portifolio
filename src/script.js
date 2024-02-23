@@ -17,7 +17,7 @@ window.addEventListener("load", () => {
 
 // Open CV
 document.querySelector("#pdf-button").addEventListener("click", () => {
-  const cvPath = "./assets/doc/Currículo Eros Netto Antunes.pdf";
+  const cvPath = "./public/doc/Currículo Eros Netto Antunes.pdf";
   window.open(cvPath, "_blank");
 });
 
@@ -35,7 +35,6 @@ window.addEventListener("scroll", function () {
 const slider = document.querySelectorAll(".slider");
 const btnPrev = document.getElementById("prev-button");
 const btnNext = document.getElementById("next-button");
-
 let currentSlide = 0;
 
 function hideSlider() {
