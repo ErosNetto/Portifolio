@@ -160,7 +160,7 @@ ul {
 
 /* section 1 - Home */
 .main-bg {
-  background-image: url(../img/vanishing-stripes.svg);
+  background-image: url(../public/img/vanishing-stripes.svg);
   background-size: cover;
   background-position: center center;
   color: #ffffff;
@@ -267,6 +267,14 @@ ul {
 }
 
 .carousel-grid {
+  position: relative;
+  min-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.template-one,
+.template-two {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
