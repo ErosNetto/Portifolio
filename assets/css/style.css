@@ -260,10 +260,16 @@ ul {
   margin-bottom: 2rem;
 }
 
+.grid-tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .carousel-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 3rem;
   counter-reset: grid-counter;
 }
 
@@ -277,7 +283,8 @@ ul {
 }
 
 .item img {
-  width: 100%;
+  max-width: 80px;
+  max-height: 80px;
   height: auto;
   margin-bottom: 10px;
 }
