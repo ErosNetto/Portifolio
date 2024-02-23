@@ -1,13 +1,18 @@
-// Header transition
+// All transition
 window.addEventListener("load", () => {
+  // Hearder
   const header = document.querySelector(".menu");
   header.classList.add("fadeIn");
 
-  const homeTextLeft = document.querySelector(".home-animation-left");
+  // Home
+  const homeTextLeft = document.querySelector(".home-text-content");
   homeTextLeft.classList.add("left-element");
-
-  const homeTextRight = document.querySelector(".home-animation-right");
+  const homeTextRight = document.querySelector(".home-img");
   homeTextRight.classList.add("right-element");
+
+  // About
+  const aboutTextAndTools = document.querySelector(".about-content");
+  aboutTextAndTools.classList.add("top-element");
 });
 
 // Open CV
