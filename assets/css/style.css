@@ -13,11 +13,16 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  /* font-family: 'Montserrat', sans-serif;  */
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -29,10 +34,20 @@ ul {
   list-style: none;
 }
 
+.hearder-content {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 10rem 3rem;
+}
+
 .main-content {
   max-width: 120rem;
   margin: 0 auto;
-  /* padding: 10rem 3rem; */
+  padding: 10rem 9cqw;
+}
+
+.section {
+  min-height: 90vh;
 }
 
 /* header */
@@ -44,16 +59,7 @@ ul {
   right: 0;
   z-index: 1;
   opacity: 0;
-
-  background: rgba(255, 255, 255, 0.063);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.188);
-  backdrop-filter: blur(10px);
-
-  /* border-bottom: 0.1rem solid rgb(238, 238, 238); */
-}
-
-.menu.fadeIn {
-  animation: fadeIn 0.5s ease forwards;
+  transition: 0.3s;
 }
 
 .menu-content {
@@ -67,7 +73,7 @@ ul {
 
 .menu h1 a {
   font-size: 2.3rem;
-  color: black;
+  color: white;
   /* transition: 0.3s; */
 }
 
@@ -82,10 +88,12 @@ ul {
 .menu ul li {
   display: block;
   padding: 1.8rem 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .menu ul li a {
-  color: black;
+  color: white;
   position: relative;
   font-size: 1.8rem;
 }
@@ -97,7 +105,7 @@ ul {
   left: 0;
   width: 0;
   height: 0.2rem;
-  background: black;
+  background: white;
   transition: width 0.3s ease-in-out;
 }
 
@@ -112,14 +120,14 @@ ul {
   left: 0;
   width: 10px;
   height: 0.2rem;
-  background: black;
+  background: white;
 }
 
 .menu ul li button {
-  border: 0.1rem solid black;
+  border: 0.1rem solid white;
   border-radius: 4px;
   background: none;
-  color: black;
+  color: white;
   padding: 0.2rem 0.8rem;
   font-size: 1.8rem;
   cursor: pointer;
@@ -127,8 +135,17 @@ ul {
 }
 
 .menu ul li button:hover {
-  background: black;
+  background: white;
   color: white;
+}
+
+.menu-blur {
+  background: rgba(255, 255, 255, 0.063);
+  backdrop-filter: blur(10px);
+}
+
+.menu.fadeIn {
+  animation: fadeIn 0.5s ease forwards;
 }
 
 /* Header transition */
@@ -143,7 +160,84 @@ ul {
   }
 }
 
-.menu #teste {
-  height: 1000px;
-  background-color: white;
+/* section 1 */
+.main-bg {
+  background-image: url(../img/vanishing-stripes.svg);
+  background-size: cover;
+  background-position: center center;
+  color: #ffffff;
+}
+
+.other-bg {
+  background: #000022;
+  color: #ffffff;
+}
+
+.home-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1rem;
+  min-height: 90vh;
+}
+
+.home-text-content,
+.home-img {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.home-text-content h2 {
+  font-size: 5rem;
+  font-weight: 800;
+
+  /* margin-bottom: 1rem; */
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.home-text-content p {
+  font-size: 2rem;
+}
+
+.home-img img,
+.home-img svg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* Menu transition */
+.left-element {
+  animation-name: fadeInLeft;
+  animation-duration: 0.6s;
+}
+
+.right-element {
+  animation-name: fadeInRight;
+  animation-duration: 0.6s;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
