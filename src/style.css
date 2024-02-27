@@ -34,18 +34,14 @@ ul {
   list-style: none;
 }
 
-.section {
-  min-height: auto;
+.other-bg {
+  background: #000022;
+  color: #ffffff;
 }
 
 .max-content-width {
   max-width: 120rem;
   margin: 0 auto;
-}
-
-.other-bg {
-  background: #000022;
-  color: #ffffff;
 }
 
 /* header */
@@ -159,6 +155,10 @@ ul {
 }
 
 /* section 1 - Home */
+.section {
+  min-height: 100vh;
+}
+
 .main-bg {
   background-image: url(../public/img/vanishing-stripes.svg);
   background-size: cover;
@@ -171,7 +171,10 @@ ul {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 3rem;
-  padding: 9rem 9rem 7rem 9rem;
+  min-height: 100vh;
+  padding: 10rem 9rem;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 .home-text-content,
@@ -346,7 +349,7 @@ ul {
 @keyframes fadeInTop {
   from {
     opacity: 0;
-    transform: translatey(100px);
+    transform: translatey(300px);
   }
   to {
     opacity: 1;
