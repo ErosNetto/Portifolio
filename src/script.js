@@ -11,20 +11,33 @@ window.addEventListener("load", () => {
   homeTextRight.classList.add("right-element");
 });
 
-// About transition revisar
-const aboutTextAndTools = document.querySelector(".about-content");
-const section = document.getElementById("about");
+// // About transition revisar
+// const aboutTextAndTools = document.querySelector(".about-content");
+// const section = document.getElementById("about");
 
-function isComponentAboveViewport(el) {
-  const rect = el.getBoundingClientRect();
-  return rect.top < window.innerHeight - 250;
+// function isComponentAboveViewport(el) {
+//   const rect = el.getBoundingClientRect();
+//   return rect.top < window.innerHeight - 250;
+// }
+
+// window.addEventListener("scroll", () => {
+//   if (isComponentAboveViewport(section)) {
+//     aboutTextAndTools.classList.add("top-element");
+//   }
+// });
+
+// Nav scroll function
+function scrollToSection(id) {
+  let section = document.getElementById(id);
+  let sectionTop = section.offsetTop;
+  let windowH = window.innerHeight;
+  let position = sectionTop - windowH / 2 + section.offsetHeight / 2;
+
+  window.scrollTo({
+    top: position,
+    behavior: "smooth",
+  });
 }
-
-window.addEventListener("scroll", () => {
-  if (isComponentAboveViewport(section)) {
-    aboutTextAndTools.classList.add("top-element");
-  }
-});
 
 // Open CV
 document.querySelector("#pdf-button").addEventListener("click", () => {
@@ -47,6 +60,7 @@ const slider = document.querySelectorAll(".slider");
 const btnPrev = document.getElementById("prev-button");
 const btnNext = document.getElementById("next-button");
 let currentSlide = 0;
+let intervalId;
 
 function hideSlider() {
   slider.forEach((item) => item.classList.remove("on"));
@@ -56,7 +70,7 @@ function showSlider() {
   slider[currentSlide].classList.add("on");
 }
 
-btnNext.addEventListener("click", () => {
+function nextSlide() {
   hideSlider();
   if (currentSlide === slider.length - 1) {
     currentSlide = 0;
@@ -64,8 +78,9 @@ btnNext.addEventListener("click", () => {
     currentSlide++;
   }
   showSlider();
-});
-btnPrev.addEventListener("click", () => {
+}
+
+function prevSlide() {
   hideSlider();
   if (currentSlide === 0) {
     currentSlide = slider.length - 1;
@@ -73,4 +88,24 @@ btnPrev.addEventListener("click", () => {
     currentSlide--;
   }
   showSlider();
+}
+
+function sliderAutoPlay() {
+  intervalId = setInterval(() => {
+    nextSlide();
+  }, 5000);
+}
+
+btnNext.addEventListener("click", () => {
+  nextSlide();
+  clearInterval(intervalId);
+  sliderAutoPlay();
 });
+
+btnPrev.addEventListener("click", () => {
+  prevSlide();
+  clearInterval(intervalId);
+  sliderAutoPlay();
+});
+
+sliderAutoPlay();
