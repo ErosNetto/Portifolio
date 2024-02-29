@@ -27,11 +27,24 @@ window.addEventListener("load", () => {
 // });
 
 // Nav scroll function
-function scrollToSection(id) {
+function scrollToCenteredSection(id) {
   let section = document.getElementById(id);
   let sectionTop = section.offsetTop;
   let windowH = window.innerHeight;
   let position = sectionTop - windowH / 2 + section.offsetHeight / 2;
+
+  window.scrollTo({
+    top: position,
+    behavior: "smooth",
+  });
+}
+
+function scrollToSectionTop(id, offset = 0) {
+  let section = document.getElementById(id);
+  if (!section) return; // Verifica se a seção existe
+  let sectionTop = section.offsetTop;
+  let windowH = window.innerHeight;
+  let position = sectionTop + offset;
 
   window.scrollTo({
     top: position,
@@ -93,7 +106,7 @@ function prevSlide() {
 function sliderAutoPlay() {
   intervalId = setInterval(() => {
     nextSlide();
-  }, 5000);
+  }, 4500);
 }
 
 btnNext.addEventListener("click", () => {

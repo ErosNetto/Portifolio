@@ -384,6 +384,7 @@ ul {
 .project {
   max-width: 120rem;
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr 2.5fr;
   gap: 2rem;
   border: 1px solid white;
@@ -403,13 +404,38 @@ ul {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 1rem;
+
+  & p {
+    font-size: 1.6rem;
+  }
 }
 
 .project-title {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
+
+  & h3 {
+    font-size: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+.technologies-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+
+  & div {
+    border: 1px solid #ffffff;
+    border-radius: 1.5rem;
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    color: red;
+  }
 }
 
 .project-buttons {
@@ -418,6 +444,7 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
+  gap: 2rem;
 
   & button {
     border: 0.1rem solid white;
