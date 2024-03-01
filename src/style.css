@@ -52,7 +52,7 @@ ul {
   right: 0;
   width: 100%;
   z-index: 1;
-  opacity: 0;
+  /* opacity: 0; faz parte da transição */
   transition: 0.3s;
 }
 
@@ -141,6 +141,14 @@ ul {
 .menu.fadeIn {
   animation: fadeIn 0.5s ease forwards;
 }
+
+/* .menu.fadeTest {
+  transition: none;
+  opacity: 1;
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.063);
+  backdrop-filter: blur(10px);
+} */
 
 /* Header transition */
 @keyframes fadeIn {
@@ -461,4 +469,20 @@ ul {
     background: white;
     color: black;
   }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
 }

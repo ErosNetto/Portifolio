@@ -1,15 +1,15 @@
-// Hearder transition
-window.addEventListener("load", () => {
-  // Hearder
-  const header = document.querySelector(".menu");
-  header.classList.add("fadeIn");
+// // Hearder transition
+// window.addEventListener("load", () => {
+//   // Hearder
+//   const header = document.querySelector(".menu");
+//   header.classList.add("fadeIn");
 
-  // Home
-  const homeTextLeft = document.querySelector(".home-text-content");
-  homeTextLeft.classList.add("left-element");
-  const homeTextRight = document.querySelector(".home-img");
-  homeTextRight.classList.add("right-element");
-});
+//   // Home
+//   const homeTextLeft = document.querySelector(".home-text-content");
+//   homeTextLeft.classList.add("left-element");
+//   const homeTextRight = document.querySelector(".home-img");
+//   homeTextRight.classList.add("right-element");
+// });
 
 // // About transition revisar
 // const aboutTextAndTools = document.querySelector(".about-content");
