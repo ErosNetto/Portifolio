@@ -513,3 +513,12 @@ footer {
   font-size: 1.5rem;
   font-weight: 400;
 }
+
+/*  Media Queries (Responsividade) */
+@media (max-width: 800px) {
+  .home-content,
+  .about-content,
+  .project {
+    grid-template-columns: 1fr;
+  }
+}
