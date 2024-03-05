@@ -34,6 +34,10 @@ ul {
   list-style: none;
 }
 
+.close-menu {
+  display: none;
+}
+
 .other-bg {
   background: #000022;
   color: #ffffff;
@@ -70,10 +74,6 @@ ul {
   color: white;
   /* transition: 0.3s; */
 }
-
-/* .menu h1 a:hover {
-  color: rgba(0, 0, 0, 0.596);
-} */
 
 .menu ul {
   display: flex;
@@ -259,7 +259,6 @@ ul {
 .about-text-content h2 {
   font-size: 4rem;
   font-weight: 800;
-
   margin-bottom: 2rem;
   text-transform: uppercase;
   line-height: 1.2;
@@ -334,17 +333,17 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
 
-.item img {
-  max-width: 80px;
-  max-height: 80px;
-  height: auto;
-  margin-bottom: 10px;
-}
+  & img {
+    max-width: 80px;
+    max-height: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
 
-.item h3 {
-  font-size: 1.8rem;
+  & h3 {
+    font-size: 1.8rem;
+  }
 }
 
 /* About transition */
@@ -478,7 +477,6 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
   padding: 2rem 0;
 
   & h2 {
@@ -520,5 +518,56 @@ footer {
   .about-content,
   .project {
     grid-template-columns: 1fr;
+  }
+
+  .menu {
+    bottom: 0;
+    text-align: center;
+  }
+
+  .menu-content,
+  .menu-content ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu-content ul li {
+    justify-content: center;
+  }
+
+  .menu-content {
+    height: 100vh;
+  }
+
+  /*  Menu mobile  */
+  .menu {
+    display: none;
+  }
+
+  .close-menu-label::after {
+    content: "☰";
+    position: fixed;
+    z-index: 2;
+    top: 2rem;
+    right: 2rem;
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-size: 3rem;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  .close-menu:checked ~ .menu {
+    display: block;
+    background: rgba(255, 255, 255, 0.063);
+    backdrop-filter: blur(10px);
+  }
+
+  .close-menu:checked ~ .close-menu-label::after {
+    content: "×";
   }
 }

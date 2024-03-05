@@ -14,14 +14,22 @@
     />
   </head>
   <body>
-    <!-- Header -->
+    <input
+      id="close-menu"
+      class="close-menu"
+      type="checkbox"
+      aria-label="Close menu"
+      role="button"
+    />
+    <label class="close-menu-label" for="close-menu" title="Close menu"></label>
+
     <aside class="menu">
       <div class="menu-content">
-        <h1>
+        <h1 onclick="getElementById('close-menu').checked = false;">
           <a href="#home">Eros</a>
         </h1>
         <nav>
-          <ul>
+          <ul onclick="getElementById('close-menu').checked = false;">
             <li>
               <a onclick="scrollToCenteredSection('about')">Sobre</a>
             </li>
@@ -38,7 +46,6 @@
       </div>
     </aside>
 
-    <!-- Section 1 -->
     <section id="home" class="section main-bg">
       <div class="home-content">
         <div class="home-text-content">
@@ -54,7 +61,6 @@
       </div>
     </section>
 
-    <!-- Sectio 2 -->
     <section id="about" class="other-bg">
       <div class="about-content max-content-width">
         <div class="about-text-content">
