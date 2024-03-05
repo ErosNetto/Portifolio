@@ -637,4 +637,8 @@ footer {
   .close-menu:checked ~ .close-menu-label::after {
     content: "×";
   }
+
+  #divider {
+    display: none;
+  }
 }

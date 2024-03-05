@@ -64,21 +64,21 @@ let idioma = "port";
 translateImg.addEventListener("click", () => {
   if (idioma === "port") {
     translateImg.src = "./public/img/bandeira-eua.png";
-    translateEnglish();
-    idioma = "eua";
+    idioma = "ing";
+    translateEnglish(idioma);
   } else {
     translateImg.src = "./public/img/bandeira-brasil.png";
-    translatePortuguese();
     idioma = "port";
+    translatePortuguese(idioma);
   }
 });
 
-function translatePortuguese() {
-  console.log("Está em Portugues");
-}
-
-function translateEnglish() {
-  console.log("Está em Inglês");
+function translatePortugueseOrEnglish(lang) {
+  if (lang === "port") {
+  } else if (lang === "ing") {
+  } else {
+    console.log("ERROR");
+  }
 }
 
 // Blur Hearder
