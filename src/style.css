@@ -524,8 +524,15 @@ footer {
   .home-content,
   .about-content,
   .my-projects-content {
-    padding-right: 6rem;
-    padding-left: 6rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+
+  .home-text-content,
+  .about-text-content,
+  .my-projects-content h2,
+  .my-projects-content > p {
+    text-align: center;
   }
 
   .project-title {
