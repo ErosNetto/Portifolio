@@ -520,6 +520,27 @@ footer {
   font-weight: 400;
 }
 
+@media screen and (max-width: 460px) {
+  .project-title {
+    text-align: center;
+  }
+
+  .project-buttons {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-title {
+    flex-direction: column;
+  }
+
+  .technologies-content {
+    margin: 1rem 0;
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .home-content,
   .about-content,
