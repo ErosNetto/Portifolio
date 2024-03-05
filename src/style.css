@@ -397,7 +397,8 @@ ul {
   border: 1px solid white;
   border-radius: 15px;
   padding: 2rem;
-  margin: 0 4rem 5rem 4rem;
+  /* margin: 0 4rem 5rem 4rem; */
+  margin-bottom: 5rem;
 
   & img {
     max-width: 100%;
@@ -520,6 +521,11 @@ footer {
   font-weight: 400;
 }
 
+/* teste
+.menu-spacing {
+  height: 65px;
+} */
+
 @media screen and (max-width: 460px) {
   .home-content,
   .about-content,
@@ -612,4 +618,8 @@ footer {
   .close-menu:checked ~ .close-menu-label::after {
     content: "×";
   }
+
+  /* .menu-spacing {
+    display: none;
+  } */
 }

@@ -39,21 +39,21 @@ function scrollToCenteredSection(id) {
   });
 }
 
-function scrollToSectionTop(id, offset = 0) {
-  let section = document.getElementById(id);
-  if (!section) return; // Verifica se a seção existe
-  let sectionTop = section.offsetTop;
-  let windowH = window.innerHeight;
-  let position = sectionTop + offset;
+// function scrollToSectionTop(id, offset = 0) {
+//   let section = document.getElementById(id);
+//   if (!section) return; // Verifica se a seção existe
+//   let sectionTop = section.offsetTop;
+//   let windowH = window.innerHeight;
+//   let position = sectionTop + offset;
 
-  window.scrollTo({
-    top: position,
-    behavior: "smooth",
-  });
-}
+//   window.scrollTo({
+//     top: position,
+//     behavior: "smooth",
+//   });
+// }
 
 // Open CV
-document.querySelector("#pdf-button").addEventListener("click", () => {
+document.querySelector("#cv-button").addEventListener("click", () => {
   const cvPath = "./public/doc/Currículo Eros Netto Antunes.pdf";
   window.open(cvPath, "_blank");
 });
