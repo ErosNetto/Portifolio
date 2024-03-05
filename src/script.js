@@ -58,6 +58,29 @@ document.querySelector("#cv-button").addEventListener("click", () => {
   window.open(cvPath, "_blank");
 });
 
+// Translate
+const translateImg = document.querySelector("#translate-button");
+let idioma = "port";
+translateImg.addEventListener("click", () => {
+  if (idioma === "port") {
+    translateImg.src = "./public/img/bandeira-eua.png";
+    translateEnglish();
+    idioma = "eua";
+  } else {
+    translateImg.src = "./public/img/bandeira-brasil.png";
+    translatePortuguese();
+    idioma = "port";
+  }
+});
+
+function translatePortuguese() {
+  console.log("Está em Portugues");
+}
+
+function translateEnglish() {
+  console.log("Está em Inglês");
+}
+
 // Blur Hearder
 const header = document.querySelector(".menu");
 window.addEventListener("scroll", () => {
@@ -69,56 +92,56 @@ window.addEventListener("scroll", () => {
 });
 
 // Slider
-const slider = document.querySelectorAll(".slider");
-const btnPrev = document.getElementById("prev-button");
-const btnNext = document.getElementById("next-button");
-let currentSlide = 0;
-let intervalId;
+// const slider = document.querySelectorAll(".slider");
+// const btnPrev = document.getElementById("prev-button");
+// const btnNext = document.getElementById("next-button");
+// let currentSlide = 0;
+// let intervalId;
 
-function hideSlider() {
-  slider.forEach((item) => item.classList.remove("on"));
-}
+// function hideSlider() {
+//   slider.forEach((item) => item.classList.remove("on"));
+// }
 
-function showSlider() {
-  slider[currentSlide].classList.add("on");
-}
+// function showSlider() {
+//   slider[currentSlide].classList.add("on");
+// }
 
-function nextSlide() {
-  hideSlider();
-  if (currentSlide === slider.length - 1) {
-    currentSlide = 0;
-  } else {
-    currentSlide++;
-  }
-  showSlider();
-}
+// function nextSlide() {
+//   hideSlider();
+//   if (currentSlide === slider.length - 1) {
+//     currentSlide = 0;
+//   } else {
+//     currentSlide++;
+//   }
+//   showSlider();
+// }
 
-function prevSlide() {
-  hideSlider();
-  if (currentSlide === 0) {
-    currentSlide = slider.length - 1;
-  } else {
-    currentSlide--;
-  }
-  showSlider();
-}
+// function prevSlide() {
+//   hideSlider();
+//   if (currentSlide === 0) {
+//     currentSlide = slider.length - 1;
+//   } else {
+//     currentSlide--;
+//   }
+//   showSlider();
+// }
 
-function sliderAutoPlay() {
-  intervalId = setInterval(() => {
-    nextSlide();
-  }, 4500);
-}
+// function sliderAutoPlay() {
+//   intervalId = setInterval(() => {
+//     nextSlide();
+//   }, 4500);
+// }
 
-btnNext.addEventListener("click", () => {
-  nextSlide();
-  clearInterval(intervalId);
-  sliderAutoPlay();
-});
+// btnNext.addEventListener("click", () => {
+//   nextSlide();
+//   clearInterval(intervalId);
+//   sliderAutoPlay();
+// });
 
-btnPrev.addEventListener("click", () => {
-  prevSlide();
-  clearInterval(intervalId);
-  sliderAutoPlay();
-});
+// btnPrev.addEventListener("click", () => {
+//   prevSlide();
+//   clearInterval(intervalId);
+//   sliderAutoPlay();
+// });
 
-sliderAutoPlay();
+// sliderAutoPlay();

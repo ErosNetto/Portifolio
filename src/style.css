@@ -107,14 +107,15 @@ ul {
   width: 100%;
 }
 
-.menu .conntact a::after {
-  content: "";
-  position: absolute;
-  top: 0rem;
-  left: 0;
-  width: 10px;
-  height: 0.2rem;
-  background: white;
+#divider {
+  padding: 1.8rem 0.2rem;
+
+  &::after {
+    content: "";
+    width: 1px;
+    height: 28px;
+    background: white;
+  }
 }
 
 .menu ul li button {
@@ -126,6 +127,26 @@ ul {
   font-size: 1.8rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+.menu ul li div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  & img {
+    width: 41px;
+  }
+}
+
+#language-button {
+  display: flex;
+
+  & img {
+    width: 21px;
+    height: 21px;
+  }
 }
 
 .menu ul li button:hover {
@@ -515,16 +536,14 @@ footer {
 }
 
 .copyright {
+  width: 100%;
+  text-align: center;
   color: #ffffff;
-  margin: 2rem 0 0 0;
+  border-top: 1px solid white;
+  padding-top: 2rem;
   font-size: 1.5rem;
   font-weight: 400;
 }
-
-/* teste
-.menu-spacing {
-  height: 65px;
-} */
 
 @media screen and (max-width: 460px) {
   .home-content,
@@ -618,8 +637,4 @@ footer {
   .close-menu:checked ~ .close-menu-label::after {
     content: "×";
   }
-
-  /* .menu-spacing {
-    display: none;
-  } */
 }
