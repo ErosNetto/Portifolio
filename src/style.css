@@ -521,6 +521,13 @@ footer {
 }
 
 @media screen and (max-width: 460px) {
+  .home-content,
+  .about-content,
+  .my-projects-content {
+    padding-right: 6rem;
+    padding-left: 6rem;
+  }
+
   .project-title {
     text-align: center;
   }
