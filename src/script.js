@@ -65,17 +65,59 @@ translateImg.addEventListener("click", () => {
   if (idioma === "port") {
     translateImg.src = "./public/img/bandeira-eua.png";
     idioma = "ing";
-    translateEnglish(idioma);
+    translatePortugueseOrEnglish(idioma);
   } else {
     translateImg.src = "./public/img/bandeira-brasil.png";
     idioma = "port";
-    translatePortuguese(idioma);
+    translatePortugueseOrEnglish(idioma);
   }
 });
 
 function translatePortugueseOrEnglish(lang) {
+  // Nav
+  let aboutText = document.querySelector("#aboutText");
+  let projectText = document.querySelector("#projectText");
+  let contactText = document.querySelector("#contactText");
+  // Home
+  let homeTextP = document.querySelector("#home p");
+  // About
+  let aboutTextH2 = document.querySelector(".about-text-content h2");
+  let aboutTextP1 = document.querySelector(".about-text-content > p");
+  let aboutTextP2 = document.querySelector(".about-text-content p + p");
+  // Projects
+  let projectsTextH2 = document.querySelector(".my-projects-content h2");
+  let projectsTextP = document.querySelector(".my-projects-content > p");
+  // Contact
+  let contactTextH2 = document.querySelector("#contact h2");
+
   if (lang === "port") {
+    aboutText.innerHTML = "Sobre";
+    projectText.innerHTML = "Projetos";
+    contactText.innerHTML = "Contato";
+    homeTextP.innerHTML = "Desenvolvedor Web";
+    aboutTextH2.innerHTML = "Sobre mim";
+    aboutTextP1.innerHTML =
+      "1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam minus aliquam, quod quasi consectetur assumenda voluptatibus totam praesentium illum sapiente omnis. Incidunt autem quo natus quas quam aperiam possimus quae! Portugues";
+    aboutTextP2.innerHTML =
+      "2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam minus aliquam, quod quasi consectetur assumenda voluptatibus totam praesentium illum sapiente omnis. Incidunt autem quo natus quas quam aperiam possimus quae! Portugues";
+    projectsTextH2.innerHTML = "Meus Projetos";
+    projectsTextP.innerHTML =
+      "Explore alguns dos projetos que desenvolvi com dedicação e empenho.";
+    contactTextH2.innerHTML = "Contato";
   } else if (lang === "ing") {
+    aboutText.innerHTML = "About";
+    projectText.innerHTML = "Projects";
+    contactText.innerHTML = "Contact";
+    homeTextP.innerHTML = "Web developer";
+    aboutTextH2.innerHTML = "About me";
+    aboutTextP1.innerHTML =
+      "1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam minus aliquam, quod quasi consectetur assumenda voluptatibus totam praesentium illum sapiente omnis. Incidunt autem quo natus quas quam aperiam possimus quae! inglês";
+    aboutTextP2.innerHTML =
+      "2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam minus aliquam, quod quasi consectetur assumenda voluptatibus totam praesentium illum sapiente omnis. Incidunt autem quo natus quas quam aperiam possimus quae! inglês";
+    projectsTextH2.innerHTML = "My Projects";
+    projectsTextP.innerHTML =
+      "Explore some of the projects I developed with dedication and commitment.";
+    contactTextH2.innerHTML = "Contact";
   } else {
     console.log("ERROR");
   }
