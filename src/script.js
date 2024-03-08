@@ -60,15 +60,15 @@ document.querySelector("#cv-button").addEventListener("click", () => {
 
 // Translate
 const translateImg = document.querySelector("#translate-button");
-let idioma = "port";
+let idioma = "pt-br";
 translateImg.addEventListener("click", () => {
-  if (idioma === "port") {
+  if (idioma === "pt-br") {
     translateImg.src = "./public/img/bandeira-eua.png";
-    idioma = "ing";
+    idioma = "en";
     translatePortugueseOrEnglish(idioma);
   } else {
     translateImg.src = "./public/img/bandeira-brasil.png";
-    idioma = "port";
+    idioma = "pt-br";
     translatePortugueseOrEnglish(idioma);
   }
 });
@@ -90,7 +90,7 @@ function translatePortugueseOrEnglish(lang) {
   // Contact
   let contactTextH2 = document.querySelector("#contact h2");
 
-  if (lang === "port") {
+  if (lang === "pt-br") {
     aboutText.innerHTML = "Sobre";
     projectText.innerHTML = "Projetos";
     contactText.innerHTML = "Contato";
@@ -104,7 +104,7 @@ function translatePortugueseOrEnglish(lang) {
     projectsTextP.innerHTML =
       "Explore alguns dos projetos que desenvolvi com dedicação e empenho.";
     contactTextH2.innerHTML = "Contato";
-  } else if (lang === "ing") {
+  } else if (lang === "en") {
     aboutText.innerHTML = "About";
     projectText.innerHTML = "Projects";
     contactText.innerHTML = "Contact";
@@ -133,7 +133,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Slider
+// Slide
 // const slider = document.querySelectorAll(".slider");
 // const btnPrev = document.getElementById("prev-button");
 // const btnNext = document.getElementById("next-button");
@@ -187,3 +187,7 @@ window.addEventListener("scroll", () => {
 // });
 
 // sliderAutoPlay();
+
+// New carousel
+let copy = document.querySelector(".tools-slide").cloneNode(true);
+document.querySelector(".tools").appendChild(copy);

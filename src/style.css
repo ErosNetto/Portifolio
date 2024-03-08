@@ -159,20 +159,12 @@ ul {
   backdrop-filter: blur(10px);
 }
 
-.menu.fadeIn {
+/* .menu.fadeIn {
   animation: fadeIn 0.5s ease forwards;
 }
 
-/* .menu.fadeTest {
-  transition: none;
-  opacity: 1;
-  transform: translateY(0);
-  background: rgba(255, 255, 255, 0.063);
-  backdrop-filter: blur(10px);
-} */
-
 /* Header transition */
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(-50px);
@@ -181,7 +173,7 @@ ul {
     opacity: 1;
     transform: translateY(0);
   }
-}
+} */
 
 /* section 1 - Home */
 .section {
@@ -235,7 +227,7 @@ ul {
 }
 
 /* Home transition */
-.left-element {
+/* .left-element {
   animation-name: fadeInLeft;
   animation-duration: 0.6s;
 }
@@ -265,7 +257,7 @@ ul {
     opacity: 1;
     transform: translateX(0);
   }
-}
+} */
 
 /* Section 2 - About */
 .about-content {
@@ -296,9 +288,63 @@ ul {
   align-items: center;
 }
 
-.container-slider {
+/* Teste */
+.tools {
+  overflow: hidden;
+  max-width: 100%;
+  padding: 6rem 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.tools::before,
+.tools::after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.tools::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.tools::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.tools:hover .tools-slide {
+  animation-play-state: paused;
+}
+
+.tools-slide {
+  display: inline-block;
+  animation: 20s slide infinite linear;
+}
+
+.tools-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* .container-slider {
   display: flex;
   width: 100%;
+  height: 100%;
   min-height: auto;
   align-items: center;
   justify-content: center;
@@ -336,7 +382,6 @@ ul {
   transition: opacity 0.2s;
   position: absolute;
   width: 100%;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
@@ -348,6 +393,7 @@ ul {
 }
 
 .item {
+  position: relative;
   max-width: 80px;
   height: auto;
   display: flex;
@@ -356,8 +402,8 @@ ul {
   justify-content: center;
 
   & img {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 8rem;
+    max-height: 8rem;
     height: auto;
     margin-bottom: 10px;
   }
@@ -365,10 +411,10 @@ ul {
   & h3 {
     font-size: 1.8rem;
   }
-}
+} */
 
 /* About transition */
-.top-element {
+/* .top-element {
   animation-name: fadeInTop;
   animation-duration: 0.6s;
 }
@@ -382,7 +428,7 @@ ul {
     opacity: 1;
     transform: translatey(0);
   }
-}
+} */
 
 /* Section 3 - Projects */
 .my-projects-content {
@@ -515,7 +561,7 @@ footer {
   flex-direction: row;
   flex-wrap: nowrap;
   height: 100%;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
   & a {
     margin: 0.5rem;
@@ -553,7 +599,6 @@ footer {
     padding-left: 5rem;
   }
 
-  .home-text-content,
   .about-text-content,
   .my-projects-content h2,
   .my-projects-content > p {
@@ -581,6 +626,10 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
+  .home-text-content {
+    text-align: center;
+  }
+
   .home-content,
   .about-content,
   .project {
