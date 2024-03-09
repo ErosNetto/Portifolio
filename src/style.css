@@ -290,7 +290,7 @@ ul {
 
 .tools {
   overflow: hidden;
-  max-width: 100%;
+  max-width: 64rem;
   padding: 2rem 0;
   white-space: nowrap;
   position: relative;
@@ -542,6 +542,10 @@ footer {
 @media screen and (max-width: 800px) {
   .home-text-content {
     text-align: center;
+  }
+
+  .tools {
+    width: 100%;
   }
 
   .home-content,
