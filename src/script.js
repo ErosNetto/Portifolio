@@ -133,61 +133,17 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Slide
-// const slider = document.querySelectorAll(".slider");
-// const btnPrev = document.getElementById("prev-button");
-// const btnNext = document.getElementById("next-button");
-// let currentSlide = 0;
-// let intervalId;
-
-// function hideSlider() {
-//   slider.forEach((item) => item.classList.remove("on"));
-// }
-
-// function showSlider() {
-//   slider[currentSlide].classList.add("on");
-// }
-
-// function nextSlide() {
-//   hideSlider();
-//   if (currentSlide === slider.length - 1) {
-//     currentSlide = 0;
-//   } else {
-//     currentSlide++;
-//   }
-//   showSlider();
-// }
-
-// function prevSlide() {
-//   hideSlider();
-//   if (currentSlide === 0) {
-//     currentSlide = slider.length - 1;
-//   } else {
-//     currentSlide--;
-//   }
-//   showSlider();
-// }
-
-// function sliderAutoPlay() {
-//   intervalId = setInterval(() => {
-//     nextSlide();
-//   }, 4500);
-// }
-
-// btnNext.addEventListener("click", () => {
-//   nextSlide();
-//   clearInterval(intervalId);
-//   sliderAutoPlay();
-// });
-
-// btnPrev.addEventListener("click", () => {
-//   prevSlide();
-//   clearInterval(intervalId);
-//   sliderAutoPlay();
-// });
-
-// sliderAutoPlay();
-
 // New carousel
 let copy = document.querySelector(".tools-slide").cloneNode(true);
 document.querySelector(".tools").appendChild(copy);
+
+const closeMenu = document.querySelector("#close-menu");
+const tools = document.querySelector(".tools");
+
+closeMenu.addEventListener("change", function () {
+  if (this.checked) {
+    tools.classList.add("hide-before-after");
+  } else {
+    tools.classList.remove("hide-before-after");
+  }
+});

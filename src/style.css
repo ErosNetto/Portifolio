@@ -316,6 +316,11 @@ ul {
   background: linear-gradient(to right, rgba(255, 255, 255, 0), #000022);
 }
 
+.hide-before-after::before,
+.hide-before-after::after {
+  display: none;
+}
+
 .tools:hover .tools-slide {
   animation-play-state: paused;
 }
