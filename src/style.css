@@ -55,7 +55,7 @@ ul {
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
   /* opacity: 0; faz parte da transição */
   transition: 0.3s;
 }
@@ -380,6 +380,7 @@ ul {
   padding: 2rem;
   /* margin: 0 4rem 5rem 4rem; */
   margin-bottom: 5rem;
+  background: #000022;
 
   & img {
     max-width: 100%;
@@ -452,6 +453,13 @@ ul {
   }
 }
 
+#block {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: gray;
+  border-color: gray;
+}
+
 /* Footer */
 footer {
   display: flex;
@@ -492,7 +500,7 @@ footer {
   & img:hover {
     /* border: 1px solid white; */
     /* border: 1px solid white; */
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -513,29 +521,29 @@ footer {
     padding-right: 4rem;
     padding-left: 4rem;
   }
-
-  .my-projects-content h2,
-  .my-projects-content > p {
-    text-align: center;
-  }
-
-  .project-title {
-    text-align: center;
-  }
-
-  .project-buttons {
-    justify-content: center;
-  }
 }
 
 @media screen and (max-width: 600px) {
   .project-title {
     flex-direction: column;
+
+    & h3 {
+      margin: 0;
+    }
   }
 
   .technologies-content {
     margin: 1rem 0;
     justify-content: center;
+  }
+
+  .project-buttons {
+    justify-content: center;
+  }
+
+  .my-projects-content h2,
+  .my-projects-content > p {
+    text-align: center;
   }
 }
 
@@ -580,11 +588,11 @@ footer {
   .close-menu-label::after {
     content: "☰";
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     top: 2rem;
     right: 2rem;
-    background: var(--primary-color);
-    color: var(--white-color);
+    background: #000022;
+    color: #ffffff;
     font-size: 3rem;
     line-height: 3rem;
     width: 3rem;
@@ -592,6 +600,7 @@ footer {
     text-align: center;
     padding: 0.5rem;
     cursor: pointer;
+    border: 1px solid #ffffff;
   }
 
   .close-menu:checked ~ .menu {

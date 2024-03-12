@@ -136,14 +136,3 @@ window.addEventListener("scroll", () => {
 // New carousel
 let copy = document.querySelector(".tools-slide").cloneNode(true);
 document.querySelector(".tools").appendChild(copy);
-
-const closeMenu = document.querySelector("#close-menu");
-const tools = document.querySelector(".tools");
-
-closeMenu.addEventListener("change", function () {
-  if (this.checked) {
-    tools.classList.add("hide-before-after");
-  } else {
-    tools.classList.remove("hide-before-after");
-  }
-});
