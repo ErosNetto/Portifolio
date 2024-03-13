@@ -87,6 +87,15 @@ function translatePortugueseOrEnglish(lang) {
   // Projects
   let projectsTextH2 = document.querySelector(".my-projects-content h2");
   let projectsTextP = document.querySelector(".my-projects-content > p");
+  let projectTitle1 = document.querySelector("#project1 h3");
+  let project1 = document.querySelector("#project1 p");
+  let projectTitle2 = document.querySelector("#project2 h3");
+  let project2 = document.querySelector("#project2 p");
+  let project3 = document.querySelector("#project3 p");
+  let projectTitle4 = document.querySelector("#project4 h3");
+  let project4 = document.querySelector("#project4 p");
+  let project5 = document.querySelector("#project5 p");
+  let project6 = document.querySelector("#project6 p");
   // Contact
   let contactTextH2 = document.querySelector("#contact h2");
 
@@ -97,12 +106,24 @@ function translatePortugueseOrEnglish(lang) {
     homeTextP.innerHTML = "Desenvolvedor Web";
     aboutTextH2.innerHTML = "Sobre mim";
     aboutTextP1.innerHTML =
-      "1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam minus aliquam, quod quasi consectetur assumenda voluptatibus totam praesentium illum sapiente omnis. Incidunt autem quo natus quas quam aperiam possimus quae! Portugues";
+      "Meu nome é Eros Netto Antunes e sou desenvolvedor web. Possuo formação técnica em informática e atualmente estou cursando Engenharia de Software na Universidade Unibrasil.";
     aboutTextP2.innerHTML =
-      "2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam minus aliquam, quod quasi consectetur assumenda voluptatibus totam praesentium illum sapiente omnis. Incidunt autem quo natus quas quam aperiam possimus quae! Portugues";
+      "Tenho trabalhado como freelancer na área de desenvolvimento web, onde crio aplicações completas, desde o backend até o frontend. Além disso, estou continuamente envolvido na criação de vários projetos enquanto prosigo com meus estudos, buscando aprimorar meu conhecimento em programação web.";
     projectsTextH2.innerHTML = "Meus Projetos";
     projectsTextP.innerHTML =
       "Explore alguns dos projetos que desenvolvi com dedicação e empenho.";
+    projectTitle1.innerHTML = "Site Venda de Curso";
+    project1.innerHTML =
+      "Este é o meu Trabalho de Conclusão de Curso para o Técnico em Informática. O projeto consiste em um Site de Venda de Cursos Online, que foi inspirado no website da Udemy.";
+    projectTitle2.innerHTML = "A Rede Social";
+    project2.innerHTML = "Projeto de uma rede social parecida com o Instagram.";
+    project3.innerHTML = "Este projeto consiste em um website de um MiniBlog.";
+    projectTitle4.innerHTML = "Palavra Oculta";
+    project4.innerHTML =
+      "Jogo interativo de adivinhação de palavras com dicas.";
+    project5.innerHTML =
+      "Meu primeiro projeto desenvolvido durante o curso de TI é um site simples criado para uma mercearia.";
+    project6.innerHTML = "Uma Landing page simples.";
     contactTextH2.innerHTML = "Contato";
   } else if (lang === "en") {
     aboutText.innerHTML = "About";
@@ -111,12 +132,23 @@ function translatePortugueseOrEnglish(lang) {
     homeTextP.innerHTML = "Web developer";
     aboutTextH2.innerHTML = "About me";
     aboutTextP1.innerHTML =
-      "1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam minus aliquam, quod quasi consectetur assumenda voluptatibus totam praesentium illum sapiente omnis. Incidunt autem quo natus quas quam aperiam possimus quae! inglês";
+      "My name is Eros Netto Antunes and I am a web developer. I have a technical background in IT and am currently studying Software Engineering at Unibrasil University.";
     aboutTextP2.innerHTML =
-      "2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam minus aliquam, quod quasi consectetur assumenda voluptatibus totam praesentium illum sapiente omnis. Incidunt autem quo natus quas quam aperiam possimus quae! inglês";
+      "I have been working as a freelancer in the web development area, where I create complete applications, from the backend to the frontend. Furthermore, I am continually involved in creating various projects while continuing with my studies, seeking to improve my knowledge in web programming.";
     projectsTextH2.innerHTML = "My Projects";
     projectsTextP.innerHTML =
       "Explore some of the projects I developed with dedication and commitment.";
+    projectTitle1.innerHTML = "Course Sale Website";
+    project1.innerHTML =
+      "This is my Course Completion Work for the IT Technician. The project consists of an Online Course Sales Site, which was inspired by the Udemy website.";
+    projectTitle2.innerHTML = "The social network";
+    project2.innerHTML = "Project for a social network similar to Instagram.";
+    project3.innerHTML = "This project consists of a MiniBlog website.";
+    projectTitle4.innerHTML = "Hidden Word";
+    project4.innerHTML = "Interactive word guessing game with hints.";
+    project5.innerHTML =
+      "My first project developed during the IT course is a simple website created for a grocery store.";
+    project6.innerHTML = "A simple landing page.";
     contactTextH2.innerHTML = "Contact";
   } else {
     console.log("ERROR");
