@@ -330,7 +330,8 @@ ul {
   animation: 20s slide infinite linear;
 }
 
-.tools-slide img {
+.tools-slide img,
+.tools-slide svg {
   height: 5rem;
   margin: 0 20px;
 }
@@ -489,7 +490,8 @@ footer {
     margin: 0.5rem;
   }
 
-  & img {
+  & img,
+  & svg {
     width: 35px;
     height: 35px;
     border: 1px solid transparent;
