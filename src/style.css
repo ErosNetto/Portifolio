@@ -157,7 +157,7 @@ ul {
 .menu-blur {
   background: rgba(255, 255, 255, 0.063);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #ffffff; /* Teste de menu */
+  /* border-bottom: 1px solid #ffffff; Teste de menu */
 }
 
 /* .menu.fadeIn {
