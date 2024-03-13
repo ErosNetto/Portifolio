@@ -39,24 +39,44 @@ function scrollToCenteredSection(id) {
   });
 }
 
-// function scrollToSectionTop(id, offset = 0) {
-//   let section = document.getElementById(id);
-//   if (!section) return; // Verifica se a seção existe
-//   let sectionTop = section.offsetTop;
-//   let windowH = window.innerHeight;
-//   let position = sectionTop + offset;
-
-//   window.scrollTo({
-//     top: position,
-//     behavior: "smooth",
-//   });
-// }
+function scrollToSectionTop(id, offset = 0) {
+  let section = document.getElementById(id);
+  if (!section) return;
+  let sectionTop = section.offsetTop;
+  let windowH = window.innerHeight;
+  let position;
+  if (window.innerWidth > 800) {
+    position = sectionTop + offset;
+  } else {
+    position = sectionTop;
+  }
+  window.scrollTo({
+    top: position,
+    behavior: "smooth",
+  });
+}
 
 // Open CV
 document.querySelector("#cv-button").addEventListener("click", () => {
   const cvPath = "./public/doc/Currículo Eros Netto Antunes.pdf";
   window.open(cvPath, "_blank");
 });
+
+// Blur Hearder
+const header = document.querySelector(".menu");
+window.addEventListener("scroll", () => {
+  if (window.innerWidth > 800) {
+    if (window.scrollY > 34) {
+      header.classList.add("menu-blur");
+    } else {
+      header.classList.remove("menu-blur");
+    }
+  }
+});
+
+// New carousel
+let copy = document.querySelector(".tools-slide").cloneNode(true);
+document.querySelector(".tools").appendChild(copy);
 
 // Translate
 const translateImg = document.querySelector("#translate-button");
@@ -154,17 +174,3 @@ function translatePortugueseOrEnglish(lang) {
     console.log("ERROR");
   }
 }
-
-// Blur Hearder
-const header = document.querySelector(".menu");
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 34) {
-    header.classList.add("menu-blur");
-  } else {
-    header.classList.remove("menu-blur");
-  }
-});
-
-// New carousel
-let copy = document.querySelector(".tools-slide").cloneNode(true);
-document.querySelector(".tools").appendChild(copy);
