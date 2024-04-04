@@ -175,7 +175,7 @@ ul {
 }
 
 .main-bg {
-  background-image: url(../public/img/vanishing-stripes.svg);
+  background-image: url(./assets/img/vanishing-stripes.svg);
   background-size: cover;
   background-position: center center;
   color: #ffffff;

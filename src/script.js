@@ -58,7 +58,7 @@ function scrollToSectionTop(id, offset = 0) {
 
 // Open CV
 document.querySelector("#cv-button").addEventListener("click", () => {
-  const cvPath = "./public/doc/Currículo Eros Netto Antunes.pdf";
+  const cvPath = "../public/doc/Currículo Eros Netto Antunes.pdf";
   window.open(cvPath, "_blank");
 });
 
@@ -83,11 +83,11 @@ const translateImg = document.querySelector("#translate-button");
 let idioma = "pt-br";
 translateImg.addEventListener("click", () => {
   if (idioma === "pt-br") {
-    translateImg.src = "./public/img/bandeira-eua.png";
+    translateImg.src = "./src/assets/img/bandeira-eua.png";
     idioma = "en";
     translatePortugueseOrEnglish(idioma);
   } else {
-    translateImg.src = "./public/img/bandeira-brasil.png";
+    translateImg.src = "./src/assets/img/bandeira-brasil.png";
     idioma = "pt-br";
     translatePortugueseOrEnglish(idioma);
   }
