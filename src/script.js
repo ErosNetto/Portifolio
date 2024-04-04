@@ -58,7 +58,7 @@ function scrollToSectionTop(id, offset = 0) {
 
 // Open CV
 document.querySelector("#cv-button").addEventListener("click", () => {
-  const cvPath = "../public/doc/Currículo Eros Netto Antunes.pdf";
+  const cvPath = "../public/doc/CurriculoErosNettoAntunes.pdf";
   window.open(cvPath, "_blank");
 });
 
