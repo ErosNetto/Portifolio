@@ -116,6 +116,7 @@ function translatePortugueseOrEnglish(lang) {
   let project4 = document.querySelector("#project4 p");
   let project5 = document.querySelector("#project5 p");
   let project6 = document.querySelector("#project6 p");
+  let project7 = document.querySelector("#project7 p");
   // Contact
   let contactTextH2 = document.querySelector("#contact h2");
 
@@ -144,6 +145,8 @@ function translatePortugueseOrEnglish(lang) {
     project5.innerHTML =
       "Meu primeiro projeto desenvolvido durante o curso de TI é um site simples criado para uma mercearia.";
     project6.innerHTML = "Uma Landing page simples.";
+    project7.innerHTML =
+      "Este projeto consiste em um site desenvolvido para a imobiliária Casa Luz, com o objetivo de adicionar seus imóveis para locação ou venda.";
     contactTextH2.innerHTML = "Contato";
   } else if (lang === "en") {
     aboutText.innerHTML = "About";
@@ -169,6 +172,8 @@ function translatePortugueseOrEnglish(lang) {
     project5.innerHTML =
       "My first project developed during the IT course is a simple website created for a grocery store.";
     project6.innerHTML = "A simple landing page.";
+    project7.innerHTML =
+      "This project consists of a website developed for the real estate company Casa Luz, with the aim of adding its properties for rent or sale.";
     contactTextH2.innerHTML = "Contact";
   } else {
     console.log("ERROR");
