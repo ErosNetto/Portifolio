@@ -120,6 +120,7 @@ function translatePortugueseOrEnglish(lang) {
   // Contact
   let contactTextH2 = document.querySelector("#contact h2");
 
+  // PT-BR
   if (lang === "pt-br") {
     aboutText.innerHTML = "Sobre";
     projectText.innerHTML = "Projetos";
